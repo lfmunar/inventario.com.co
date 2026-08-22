@@ -52,12 +52,12 @@ $query = mysqli_query($con, $sql);
                 <?php while ($row = mysqli_fetch_array($query)): ?>
                 <tr>
 
-                    <th><?= $row['Id'] ?></th>
-                    <th><?= $row['producto'] ?></th>
-                    <th><?= $row['cantidad'] ?></th>
-                    <th><?= $row['valor'] ?></th>
-                    <th><a href="update.php?Id=<?= $row['Id'] ?>" class="inventario-table--edit">Editar</a></th>
-                    <th><a href="delete_inventario.php?Id=<?= $row['Id'] ?>" class="inventario-table--delete" >Eliminar</a></th>
+                    <th><?= $row['idproducto'] ?></th>
+                    <th><?= $row['nombre'] ?></th>
+                    <th><?= $row['stokc'] ?></th>
+                    <th><?= $row['precioproducto'] ?></th>
+                    <th><a href="update.php?Id=<?= $row['idproducto'] ?>" class="inventario-table--edit">Editar</a></th>
+                    <th><a href="delete_inventario.php?Id=<?= $row['idproducto'] ?>" class="inventario-table--delete" >Eliminar</a></th>
                     
                 </tr>
                 <?php endwhile; ?>
