@@ -1,20 +1,25 @@
 <?php
 
 include("connection.php");
+
 $con = connection();
 
-$Id=$_POST["Id"];
-$producto = $_POST['producto'];
-$cantidad = $_POST['cantidad'];
-$valor = $_POST['valor'];
+$Id = $_POST["idproducto"];
+$nombre = $_POST["nombre"];
+$stokc = $_POST["stokc"];
+$precioproducto = $_POST["precioproducto"];
 
-$sql="UPDATE inventario SET producto='$producto', cantidad='$cantidad', valor='$valor' WHERE Id='$Id'";
+$sql = "UPDATE producto 
+        SET nombre='$nombre', stokc='$stokc', precioproducto='$precioproducto'
+        WHERE idproducto='$Id'";
+
 $query = mysqli_query($con, $sql);
 
-if($query){
-    Header("Location: index.php");
-}else{
-
+if ($query) {
+    header("Location: index.php");
+    exit();
+} else {
+    echo "Error al actualizar: " . mysqli_error($con);
 }
 
 ?>

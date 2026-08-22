@@ -4,7 +4,7 @@
 
     $Id=$_GET['Id'];
 
-    $sql="SELECT * FROM inventario WHERE Id='$Id'";
+    $sql="SELECT * FROM producto WHERE idproducto='$Id'";
     $query=mysqli_query($con, $sql);
 
     $row=mysqli_fetch_array($query);
@@ -26,10 +26,10 @@
             font-family:algerian" 
         >Editar Inventario</h1>
             <form action="edit_inventario.php" method="POST">
-                <input type="hidden" name="Id" value="<?= $row['Id']?>">
-                <input type="text" name="producto" placeholder="producto" value="<?= $row['producto']?>">
-                <input type="text" name="cantidad" placeholder="cantidad" value="<?= $row['cantidad']?>">
-                <input type="text" name="valor" placeholder="valor" value="<?= $row['valor']?>">
+                <input type="hidden" name="idproducto" value="<?= $row['idproducto']?>">
+                <input type="text" name="nombre" placeholder="nombre" value="<?= $row['nombre']?>">
+                <input type="text" name="stokc" placeholder="stock" value="<?= $row['stokc']?>">
+                <input type="text" name="precioproducto" placeholder="precio" value="<?= $row['precioproducto']?>">
                 
                 <input type="submit" value="Actualizar">
             </form>
