@@ -3,11 +3,11 @@
 function connection(){
     $host = "localhost";
     $user = "root";
-    $pass = "";
+    $pass = "Luis3097*";
 
-    $bd = "inventario.papeleria";
+    $bd = "bdinvcontax";
 
-    $connect=mysqli_connect($host, $user, $pass);
+    $connect=mysqli_connect($host, $user, $pass,$bd);
 
     mysqli_select_db($connect, $bd);
 
