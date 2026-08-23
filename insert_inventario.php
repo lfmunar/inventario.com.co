@@ -8,7 +8,7 @@ $cantidad= $_POST['cantidad'];
 $valor = $_POST['valor'];
 
 
-$sql = "INSERT INTO producto (nombre, precioproducto, stokc) VALUES ('$producto', '$cantidad', '$valor')";
+$sql = "INSERT INTO producto (nombre, precioproducto, stokc) VALUES ('$producto', '$valor', '$cantidad')";
 $query = mysqli_query($con, $sql);
 
 if($query){

@@ -5,7 +5,7 @@
 }
 
 body{
-background-image: url(papelerialiam.avif);
+background-image: url("papelerialiam.avif");
 }
 html {
     font-family: 'Segoe UI', sans-serif;
@@ -84,17 +84,34 @@ table th{
     font-size: .85em;
 }
 
-.inventario-table--edit{
-    background: #009688;
+.inventario-table--edit,
+.inventario-table--delete {
+    display: inline-block;
     padding: 6px;
     color: #fff;
     text-align: center;
     font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    vertical-align: middle;
 }
-.inventario-table--delete{
+
+.inventario-table--edit {
+    background: #009688;
+    text-decoration: none;
+}
+
+.inventario-table--delete {
     background: #b11e1e;
-    padding: 6px;
-    color: #fff;
-    text-align: center;
-    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.inventario-table--edit:hover {
+    background: #00796b;
+}
+
+.inventario-table--delete:hover {
+    background: #8c1515;
 }
